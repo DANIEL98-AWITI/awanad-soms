@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fc;
+}
+
+.header{
+    background:#003366;
+    color:white;
+    padding:18px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    width:220px;
+}
+
+.card h2{
+    margin:0;
+    color:#003366;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
