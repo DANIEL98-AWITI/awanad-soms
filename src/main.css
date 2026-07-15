@@ -1,0 +1,17 @@
+/* AWANAD SOMS Main Styles */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+}
+
+h1{
+    color:#0B3D91;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+}
