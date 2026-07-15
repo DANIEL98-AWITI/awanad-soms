@@ -1,0 +1,17 @@
+[
+{
+"vessel":"MSC POLARIS",
+"cargo":"Containers",
+"status":"Completed"
+},
+{
+"vessel":"APL FLORIDA",
+"cargo":"Containers",
+"status":"In Progress"
+},
+{
+"vessel":"HOEGH TROTTER",
+"cargo":"RORO",
+"status":"Expected"
+}
+]
