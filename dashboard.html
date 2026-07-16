@@ -1,27 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWANAD CFS | Stevedoring Operations Management System</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
 <header class="top-header">
 
     <div class="logo-area">
-
         <img src="public/images/logo.png" class="logo" alt="AWANAD Logo">
 
-        <div>
+        <div class="company-title">
             <h1>AWANAD SOMS</h1>
             <p>Stevedoring Operations Management System</p>
         </div>
-
     </div>
 
     <div class="user-area">
-
         <input
             type="text"
             class="search-box"
             placeholder="Search vessels, invoices, containers...">
 
-        <span>🔔</span>
-
-        <span>👤 Daniel</span>
-
+        <span class="notification">🔔</span>
+        <span class="user-name">👤 Daniel</span>
     </div>
 
 </header>
+
+<div class="sidebar">
+
+    <h3>MAIN MENU</h3>
+
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">🚢 Vessel Management</a>
+    <a href="#">📦 Container Operations</a>
+    <a href="#">🚗 RORO Operations</a>
+    <a href="#">📋 Invoice Register</a>
+    <a href="#">👥 Customers</a>
+    <a href="#">📊 Reports</a>
+    <a href="#">⚙ Settings</a>
+    <a href="index.html">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+    <h1>Dashboard Overview</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>📦 Total Containers</h2>
+            <h1>156</h1>
+            <p>Containers under operation</p>
+        </div>
+
+        <div class="card">
+            <h2>🚗 RORO Units</h2>
+            <h1>83</h1>
+            <p>Vehicles received</p>
+        </div>
+
+        <div class="card">
+            <h2>🚢 Expected Vessels</h2>
+            <h1>12</h1>
+            <p>Awaiting arrival</p>
+        </div>
+
+        <div class="card">
+            <h2>💰 Pending Invoices</h2>
+            <h1>24</h1>
+            <p>Awaiting payment</p>
+        </div>
+
+    </div>
+
+    <h2>Today's Operations</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Vessel</th>
+                <th>Cargo</th>
+                <th>Status</th>
+                <th>Progress</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>MSC POLARIS</td>
+                <td>14 Containers</td>
+                <td>Discharging</td>
+                <td>75%</td>
+            </tr>
+
+            <tr>
+                <td>APL FLORIDA</td>
+                <td>2 Containers</td>
+                <td>Evacuating</td>
+                <td>60%</td>
+            </tr>
+
+            <tr>
+                <td>MSC TUXPAN</td>
+                <td>4 Containers</td>
+                <td>Awaiting Payment</td>
+                <td>20%</td>
+            </tr>
+
+            <tr>
+                <td>XIN HUANG PU</td>
+                <td>14 Containers</td>
+                <td>Evacuating</td>
+                <td>95%</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br><br>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>⚓ Port Status</h2>
+            <p>Operations Running Normally</p>
+        </div>
+
+        <div class="card">
+            <h2>📅 Today's Date</h2>
+            <p id="currentDate">Loading...</p>
+        </div>
+
+        <div class="card">
+            <h2>🕒 Current Time</h2>
+            <p id="currentTime">Loading...</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
