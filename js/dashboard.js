@@ -22,7 +22,11 @@ setInterval(updateClock,1000);
 updateClock();
 
 function openVesselForm(){
+function closeVesselForm(){
 
+document.getElementById("vesselForm").style.display="none";
+
+}
 document.getElementById("vesselForm").style.display="flex";
 
 }
