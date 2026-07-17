@@ -60,10 +60,42 @@
 
 <h1>Vessel Management</h1>
 
-<button class="action-btn">➕ Register New Vessel</button>
+<button class="action-btn" onclick="openVesselForm()">
+➕ Register New Vessel
+</button>
 
 <br><br>
+<div id="vesselForm" class="modal">
 
+<div class="modal-content">
+
+<h2>Register New Vessel</h2>
+
+<input type="text" id="vesselName" placeholder="Vessel Name">
+
+<input type="text" id="shippingLine" placeholder="Shipping Line">
+
+<input type="date" id="eta">
+
+<input type="date" id="ata">
+
+<select id="cargo">
+
+<option>Containers</option>
+
+<option>RORO</option>
+
+<option>Break Bulk</option>
+
+</select>
+
+<button class="action-btn" onclick="saveVessel()">
+Save Vessel
+</button>
+
+</div>
+
+</div>
 <table>
 
 <thead>
