@@ -286,3 +286,31 @@ background:#1565C0;
 transform:translateY(-3px);
 box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
+.activity-panel{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.activity-panel h2{
+margin-bottom:20px;
+color:#0B3D91;
+}
+
+.activity-panel ul{
+list-style:none;
+}
+
+.activity-panel li{
+padding:15px;
+border-bottom:1px solid #eee;
+font-size:15px;
+transition:.3s;
+}
+
+.activity-panel li:hover{
+background:#f4f8ff;
+padding-left:25px;
+}
