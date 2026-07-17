@@ -28,7 +28,7 @@ document.getElementById("vesselForm").style.display="none";
 
 }
 document.getElementById("vesselForm").style.display="flex";
-
+let editingRow=null;
 }
 function saveVessel(){
 
@@ -57,7 +57,19 @@ location.reload();
 
 let table=document.getElementById("vesselTableBody");
 
-let row=table.insertRow();
+let row;
+
+if(editingRow){
+
+row=editingRow;
+
+editingRow=null;
+
+}else{
+
+row=table.insertRow();
+
+}
 
 row.innerHTML=`
 <td>${vessel}</td>
@@ -177,7 +189,7 @@ row.innerHTML=`
 }
 
 }
-function editRow(btn){
+function editRow editingRow=row;{
 
 let row=btn.parentElement.parentElement;
 
