@@ -66,7 +66,51 @@ class="search-box">
 ➕ Add Container
 
 </button>
+<div id="containerForm" class="modal">
 
+<div class="modal-content">
+
+<h2>Add New Container</h2>
+
+<input type="text" id="containerNo" placeholder="Container Number">
+
+<select id="containerSize">
+
+<option>20 FT</option>
+
+<option>40 FT</option>
+
+<option>45 FT</option>
+
+</select>
+
+<input type="text" id="customerName" placeholder="Customer Name">
+
+<input type="text" id="shippingLine" placeholder="Shipping Line">
+
+<input type="text" id="yardLocation" placeholder="Yard Location">
+
+<select id="containerStatus">
+
+<option>Received</option>
+
+<option>Discharging</option>
+
+<option>Evacuating</option>
+
+<option>Released</option>
+
+</select>
+
+<button class="action-btn" onclick="saveContainer()">
+
+Save Container
+
+</button>
+
+</div>
+
+</div>
 <br><br>
 
 <table>
