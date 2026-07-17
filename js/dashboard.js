@@ -275,3 +275,26 @@ row.innerHTML=`
 document.getElementById("containerForm").style.display="none";
 
 }
+function searchContainer(){
+
+let input=document.getElementById("searchContainer").value.toUpperCase();
+
+let table=document.getElementById("containerTableBody");
+
+let tr=table.getElementsByTagName("tr");
+
+for(let i=0;i<tr.length;i++){
+
+let td=tr[i].getElementsByTagName("td")[0];
+
+if(td){
+
+let txt=td.textContent||td.innerText;
+
+tr[i].style.display=txt.toUpperCase().indexOf(input)>-1?"":"none";
+
+}
+
+}
+
+}
