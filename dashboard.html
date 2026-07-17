@@ -1,211 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<header class="top-header">
+<head>
 
-    <div class="logo-area">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <img src="public/images/logo.png" class="banner-logo" alt="AWANAD Logo">
+<title>AWANAD SOMS</title>
 
-        <div class="company-title">
-            <h1>AWANAD SOMS</h1>
-            <p>Stevedoring Operations Management System</p>
-        </div>
+<link rel="stylesheet" href="css/dashboard.css">
 
-    </div>
+</head>
 
-    <input
-        type="text"
-        class="search-box"
-        placeholder="Search vessels, containers, invoices...">
-
-    <div class="header-right">
-
-        <span class="notification">🔔</span>
-
-        <span>📅</span>
-
-        <div class="clock">
-            <div id="currentTime"></div>
-            <small id="currentDate"></small>
-        </div>
-
-        <div class="user-profile">
-
-            <div class="avatar">👤</div>
-
-            <div>
-                <strong>Daniel</strong><br>
-                <small>Operations</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
 <body>
 
-<div class="sidebar">
+<header class="top-header">
 
-<div class="logoBox">
+<div class="logo-section">
 
-<img src="public/images/logo.png">
+<img src="public/images/logo.png" class="logo" alt="AWANAD Logo">
 
-<h2>AWANAD</h2>
+<div class="company">
 
-<p>Stevedoring Operations</p>
+<h1>AWANAD SOMS</h1>
 
-</div>
-
-<ul>
-
-<li class="active">
-<i class="fa-solid fa-house"></i>
-<span>Dashboard</span>
-</li>
-
-<li>
-<i class="fa-solid fa-ship"></i>
-<span>Vessels</span>
-</li>
-
-<li>
-<i class="fa-solid fa-box"></i>
-<span>Containers</span>
-</li>
-
-<li>
-<i class="fa-solid fa-car"></i>
-<span>RORO</span>
-</li>
-
-<li>
-<i class="fa-solid fa-file-invoice"></i>
-<span>Invoices</span>
-</li>
-
-<li>
-<i class="fa-solid fa-users"></i>
-<span>Customers</span>
-</li>
-
-<li>
-<i class="fa-solid fa-chart-line"></i>
-<span>Reports</span>
-</li>
-
-<li>
-<i class="fa-solid fa-gear"></i>
-<span>Settings</span>
-</li>
-
-<li>
-<i class="fa-solid fa-right-from-bracket"></i>
-<span>Logout</span>
-</li>
-
-</ul>
-
-</div>
-
-<div class="main">
-
-<div class="topbar">
-
-<div class="search">
-
-<i class="fa fa-search"></i>
-
-<input
-type="text"
-placeholder="Search Vessel, Invoice, Customer...">
-
-</div>
-
-<div class="topIcons">
-
-<div class="bell">
-<i class="fa-solid fa-bell"></i>
-</div>
-
-<div class="calendar">
-<i class="fa-solid fa-calendar"></i>
-</div>
-
-<div class="profile">
-
-<img src="public/images/logo.png">
-
-<div>
-
-<h4>Daniel</h4>
-
-<p>Port Operations Manager</p>
+<p>Stevedoring Operations Management System</p>
 
 </div>
 
 </div>
 
+<div class="search-section">
+
+<input type="text" placeholder="Search vessels, containers, invoices...">
+
+</div>
+
+<div class="header-right">
+
+<span>🔔</span>
+
+<span>📅 <span id="currentDate"></span></span>
+
+<span>🕒 <span id="currentTime"></span></span>
+
+<div class="user">
+
+👤 Daniel
+
 </div>
 
 </div>
 
-<h1 class="title">
-Dashboard Overview
-</h1>
+</header>
 
-<div class="cards"><div class="card">
-    <div class="icon blue">
-        <i class="fa-solid fa-box"></i>
-    </div>
+<aside class="sidebar">
 
-    <div class="info">
-        <h2>156</h2>
-        <p>Total Containers</p>
-    </div>
+<h3>MAIN MENU</h3>
+
+<a href="#">🏠 Dashboard</a>
+
+<a href="#">🚢 Vessel Management</a>
+
+<a href="#">📦 Container Operations</a>
+
+<a href="#">🚗 RORO Operations</a>
+
+<a href="#">📋 Invoice Register</a>
+
+<a href="#">👥 Customers</a>
+
+<a href="#">📊 Reports</a>
+
+<a href="#">🔔 Alerts</a>
+
+<a href="#">⚙ Settings</a>
+
+<a href="index.html">🚪 Logout</a>
+
+</aside>
+
+<main class="content">
+
+<h1>Welcome back, Daniel!</h1>
+
+<p>Here's what's happening today.</p>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Containers</h2>
+<h1>156</h1>
 </div>
 
 <div class="card">
-    <div class="icon green">
-        <i class="fa-solid fa-car"></i>
-    </div>
-
-    <div class="info">
-        <h2>83</h2>
-        <p>RORO Units</p>
-    </div>
+<h2>RORO Units</h2>
+<h1>83</h1>
 </div>
 
 <div class="card">
-    <div class="icon orange">
-        <i class="fa-solid fa-ship"></i>
-    </div>
-
-    <div class="info">
-        <h2>12</h2>
-        <p>Expected Vessels</p>
-    </div>
+<h2>Expected Vessels</h2>
+<h1>12</h1>
 </div>
 
 <div class="card">
-    <div class="icon red">
-        <i class="fa-solid fa-file-invoice"></i>
-    </div>
-
-    <div class="info">
-        <h2>24</h2>
-        <p>Pending Invoices</p>
-    </div>
+<h2>Pending Invoices</h2>
+<h1>24</h1>
 </div>
 
 </div>
 
-<div class="content">
-
-<div class="leftPanel">
-
-<div class="panel">
+<div class="table-box">
 
 <h2>Today's Operations</h2>
 
@@ -216,8 +121,14 @@ Dashboard Overview
 <tr>
 
 <th>Vessel</th>
+
+<th>Type</th>
+
 <th>Cargo</th>
+
 <th>Status</th>
+
+<th>Progress</th>
 
 </tr>
 
@@ -226,27 +137,45 @@ Dashboard Overview
 <tbody>
 
 <tr>
+
 <td>MSC POLARIS</td>
+
+<td>Container</td>
+
 <td>14 Containers</td>
-<td><span class="badge green">Discharging</span></td>
+
+<td>Discharging</td>
+
+<td>85%</td>
+
 </tr>
 
 <tr>
+
 <td>APL FLORIDA</td>
+
+<td>Container</td>
+
 <td>2 Containers</td>
-<td><span class="badge blue">Evacuating</span></td>
+
+<td>Evacuating</td>
+
+<td>60%</td>
+
 </tr>
 
 <tr>
-<td>MSC TUXPAN</td>
-<td>4 Containers</td>
-<td><span class="badge orange">Awaiting Payment</span></td>
-</tr>
 
-<tr>
-<td>XIN HUANG PU</td>
-<td>14 Containers</td>
-<td><span class="badge green">95% Complete</span></td>
+<td>DON JUAN</td>
+
+<td>RORO</td>
+
+<td>41 Units</td>
+
+<td>Completed</td>
+
+<td>100%</td>
+
 </tr>
 
 </tbody>
@@ -255,103 +184,10 @@ Dashboard Overview
 
 </div>
 
-</div>
-
-<div class="rightPanel">
-
-<div class="panel">
-
-<h2>Quick Statistics</h2>
-
-<p>Containers Today</p>
-
-<progress value="82" max="100"></progress>
-
-<br><br>
-
-<p>RORO Completed</p>
-
-<progress value="63" max="100"></progress>
-
-<br><br>
-
-<p>Invoices Paid</p>
-
-<progress value="45" max="100"></progress>
-
-</div>
-
-</div>
-
-</div><div class="bottomSection">
-
-<div class="panel">
-
-<h2>Recent Alerts</h2>
-
-<div class="alert success">
-<i class="fa-solid fa-circle-check"></i>
-<span>MSC POLARIS discharge completed successfully.</span>
-</div>
-
-<div class="alert warning">
-<i class="fa-solid fa-triangle-exclamation"></i>
-<span>APL FLORIDA invoices are awaiting payment.</span>
-</div>
-
-<div class="alert info">
-<i class="fa-solid fa-circle-info"></i>
-<span>XIN HUANG PU evacuation is now 95% complete.</span>
-</div>
-
-</div>
-
-<div class="panel">
-
-<h2>Upcoming Vessels</h2>
-
-<table>
-
-<tr>
-<th>Vessel</th>
-<th>ETA</th>
-</tr>
-
-<tr>
-<td>MSC ANIELLO</td>
-<td>12 Jul 2026</td>
-</tr>
-
-<tr>
-<td>MSC TIA V</td>
-<td>13 Jul 2026</td>
-</tr>
-
-<tr>
-<td>HOLSATIA</td>
-<td>14 Jul 2026</td>
-</tr>
-
-<tr>
-<td>PROTOSTAR</td>
-<td>15 Jul 2026</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-<footer class="footer">
-
-<p>© 2026 AWANAD Container Freight Station | Stevedoring Operations Management System</p>
-
-</footer>
-
-</div>
+</main>
 
 <script src="js/dashboard.js"></script>
 
 </body>
+
 </html>
