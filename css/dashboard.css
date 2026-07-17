@@ -309,7 +309,16 @@ border-bottom:1px solid #eee;
 font-size:15px;
 transition:.3s;
 }
-
+.footer{
+margin-top:40px;
+padding:20px;
+background:#fff;
+border-radius:15px;
+text-align:center;
+font-size:14px;
+color:#666;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
 .activity-panel li:hover{
 background:#f4f8ff;
 padding-left:25px;
