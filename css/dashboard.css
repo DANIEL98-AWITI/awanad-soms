@@ -262,3 +262,27 @@ margin-bottom:10px;
 .stat-box p{
 color:#e8eef8;
 }
+.quick-actions{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin:25px 0 35px;
+}
+
+.action-btn{
+background:#0B3D91;
+color:white;
+border:none;
+padding:14px 22px;
+border-radius:10px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.action-btn:hover{
+background:#1565C0;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
