@@ -186,7 +186,7 @@ row.innerHTML=`
 
 });
 
-}
+loadContainers();}
 
 }
 function editRow editingRow=row;{
@@ -236,15 +236,15 @@ document.getElementById("containerForm").style.display="flex";
 
 function saveContainer(){
 
-let number=document.getElementById("containerNo").value;
+let number=document.getElementById("containerNo").value.trim();
 
 let size=document.getElementById("containerSize").value;
 
-let customer=document.getElementById("customerName").value;
+let customer=document.getElementById("customerName").value.trim();
 
-let line=document.getElementById("shippingLine").value;
+let line=document.getElementById("shippingLine").value.trim();
 
-let yard=document.getElementById("yardLocation").value;
+let yard=document.getElementById("yardLocation").value.trim();
 
 let status=document.getElementById("containerStatus").value;
 
@@ -256,6 +256,38 @@ return;
 
 }
 
+let container={
+
+number:number,
+
+size:size,
+
+customer:customer,
+
+line:line,
+
+yard:yard,
+
+status:status
+
+};
+
+let containers=JSON.parse(localStorage.getItem("containers"))||[];
+
+containers.push(container);
+
+localStorage.setItem("containers",JSON.stringify(containers));
+
+loadContainers();
+
+document.getElementById("containerForm").style.display="none";
+
+document.getElementById("containerNo").value="";
+document.getElementById("customerName").value="";
+document.getElementById("shippingLine").value="";
+document.getElementById("yardLocation").value="";
+
+}
 let table=document.getElementById("containerTableBody");
 
 let row=table.insertRow();
@@ -294,6 +326,52 @@ let txt=td.textContent||td.innerText;
 tr[i].style.display=txt.toUpperCase().indexOf(input)>-1?"":"none";
 
 }
+
+}
+
+}
+function loadContainers(){
+
+let table=document.getElementById("containerTableBody");
+
+if(!table) return;
+
+table.innerHTML="";
+
+let containers=JSON.parse(localStorage.getItem("containers"))||[];
+
+containers.forEach(c=>{
+
+let row=table.insertRow();
+
+row.innerHTML=`
+<td>${c.number}</td>
+<td>${c.size}</td>
+<td>${c.customer}</td>
+<td>${c.line}</td>
+<td>${c.yard}</td>
+<td><span class="badge blue">${c.status}</span></td>
+<td><button onclick="deleteContainer(this)">🗑️</button></td>
+`;
+
+});
+
+}
+function deleteContainer(btn){
+
+if(confirm("Delete this container?")){
+
+let row=btn.parentElement.parentElement;
+
+let number=row.cells[0].innerText;
+
+let containers=JSON.parse(localStorage.getItem("containers"))||[];
+
+containers=containers.filter(c=>c.number!==number);
+
+localStorage.setItem("containers",JSON.stringify(containers));
+
+loadContainers();
 
 }
 
