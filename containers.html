@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Container Operations | AWANAD SOMS</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+<div class="logo-section">
+
+<img src="public/images/logo.png" class="logo">
+
+<div class="company">
+<h1>AWANAD SOMS</h1>
+<p>Container Operations</p>
+</div>
+
+</div>
+
+<div class="user">
+👤 Daniel
+</div>
+
+</header>
+
+<div class="sidebar">
+
+<h3>MAIN MENU</h3>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="vessels.html">🚢 Vessel Management</a>
+<a href="containers.html">📦 Container Operations</a>
+<a href="#">🚗 RORO Operations</a>
+<a href="#">📋 Invoice Register</a>
+<a href="#">📊 Reports</a>
+<a href="index.html">🚪 Logout</a>
+
+</div>
+
+<div class="content">
+
+<h1>Container Operations</h1>
+
+<br>
+
+<input
+type="text"
+id="searchContainer"
+placeholder="Search Container..."
+class="search-box">
+
+<br><br>
+
+<button class="action-btn" onclick="openContainerForm()">
+
+➕ Add Container
+
+</button>
+
+<br><br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Container No</th>
+<th>Size</th>
+<th>Customer</th>
+<th>Shipping Line</th>
+<th>Yard Location</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="containerTableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
