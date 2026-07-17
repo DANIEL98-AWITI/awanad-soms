@@ -66,7 +66,10 @@ row.innerHTML=`
 <td>${ata}</td>
 <td>${cargo}</td>
 <td><span class="badge green">Active</span></td>
-<td><button onclick="deleteRow(this)">🗑️</button></td>
+<td>
+<button onclick="editRow(this)">✏️</button>
+<button onclick="deleteRow(this)">🗑️</button>
+</td>
 `;
 
 closeVesselForm();
@@ -161,11 +164,55 @@ row.innerHTML=`
 <td>${v.ata}</td>
 <td>${v.cargo}</td>
 <td><span class="badge green">Active</span></td>
-<td><button onclick="deleteRow(this)">🗑️</button></td>
+<td>
+<button onclick="editRow(this)">✏️</button>
+<button onclick="deleteRow(this)">🗑️</button>
+</td>
+<button onclick="deleteRow(this)">🗑️</button>
+</td>
 `;
 
 });
 
 }
+
+}
+function editRow(btn){
+
+let row=btn.parentElement.parentElement;
+
+document.getElementById("vesselName").value=row.cells[0].innerHTML;
+
+document.getElementById("shippingLine").value=row.cells[1].innerHTML;
+
+document.getElementById("eta").value=row.cells[2].innerHTML;
+
+document.getElementById("ata").value=row.cells[3].innerHTML;
+
+document.getElementById("cargo").value=row.cells[4].innerHTML;
+
+row.remove();
+
+openVesselForm();
+
+}
+
+function editRow(btn){
+
+let row=btn.parentElement.parentElement;
+
+document.getElementById("vesselName").value=row.cells[0].innerHTML;
+
+document.getElementById("shippingLine").value=row.cells[1].innerHTML;
+
+document.getElementById("eta").value=row.cells[2].innerHTML;
+
+document.getElementById("ata").value=row.cells[3].innerHTML;
+
+document.getElementById("cargo").value=row.cells[4].innerHTML;
+
+row.remove();
+
+openVesselForm();
 
 }
