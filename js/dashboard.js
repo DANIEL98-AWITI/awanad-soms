@@ -228,3 +228,50 @@ row.remove();
 openVesselForm();
 
 }
+function openContainerForm(){
+
+document.getElementById("containerForm").style.display="flex";
+
+}
+
+function saveContainer(){
+
+let number=document.getElementById("containerNo").value;
+
+let size=document.getElementById("containerSize").value;
+
+let customer=document.getElementById("customerName").value;
+
+let line=document.getElementById("shippingLine").value;
+
+let yard=document.getElementById("yardLocation").value;
+
+let status=document.getElementById("containerStatus").value;
+
+if(number==""||customer==""||line==""||yard==""){
+
+alert("Fill all fields");
+
+return;
+
+}
+
+let table=document.getElementById("containerTableBody");
+
+let row=table.insertRow();
+
+row.innerHTML=`
+<td>${number}</td>
+<td>${size}</td>
+<td>${customer}</td>
+<td>${line}</td>
+<td>${yard}</td>
+<td><span class="badge blue">${status}</span></td>
+<td>
+<button onclick="deleteRow(this)">🗑️</button>
+</td>
+`;
+
+document.getElementById("containerForm").style.display="none";
+
+}
