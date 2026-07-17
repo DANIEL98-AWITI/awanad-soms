@@ -33,6 +33,47 @@ document.getElementById("vesselForm").style.display="flex";
 
 function saveVessel(){
 
+let vessel=document.getElementById("vesselName").value.trim();
+
+let line=document.getElementById("shippingLine").value.trim();
+
+let eta=document.getElementById("eta").value;
+
+let ata=document.getElementById("ata").value;
+
+let cargo=document.getElementById("cargo").value;
+
+if(vessel=="" || line=="" || eta=="" || ata==""){
+
+alert("Fill all fields.");
+
+return;
+
+}
+
+let table=document.getElementById("vesselTableBody");
+
+let row=table.insertRow();
+
+row.innerHTML=`
+<td>${vessel}</td>
+<td>${line}</td>
+<td>${eta}</td>
+<td>${ata}</td>
+<td>${cargo}</td>
+<td><span class="badge green">Active</span></td>
+<td><button onclick="deleteRow(this)">🗑️</button></td>
+`;
+
+closeVesselForm();
+
+document.getElementById("vesselName").value="";
+document.getElementById("shippingLine").value="";
+document.getElementById("eta").value="";
+document.getElementById("ata").value="";
+
+}{
+
 let vessel=document.getElementById("vesselName").value;
 
 let line=document.getElementById("shippingLine").value;
@@ -63,5 +104,14 @@ document.getElementById("vesselName").value="";
 document.getElementById("shippingLine").value="";
 document.getElementById("eta").value="";
 document.getElementById("ata").value="";
+
+}function deleteRow(btn){
+
+if(confirm("Delete this vessel?")){
+
+btn.parentElement.parentElement.remove();
+
+}
+
 
 }
