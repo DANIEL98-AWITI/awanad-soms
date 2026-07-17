@@ -20,3 +20,17 @@ now.toLocaleTimeString();
 setInterval(updateClock,1000);
 
 updateClock();
+
+function openVesselForm(){
+
+document.getElementById("vesselForm").style.display="flex";
+
+}
+
+function saveVessel(){
+
+alert("Vessel Registered Successfully!");
+
+document.getElementById("vesselForm").style.display="none";
+
+}
