@@ -178,8 +178,11 @@ row.innerHTML=`
 <td><span class="badge green">Active</span></td>
 <td>
 <button onclick="editRow(this)">✏️</button>
-<button onclick="deleteRow(this)">🗑️</button>
+<td>
+<button onclick="editContainer(this)">✏️</button>
+<button onclick="deleteContainer(this)">🗑️</button>
 </td>
+
 <button onclick="deleteRow(this)">🗑️</button>
 </td>
 `;
@@ -233,7 +236,7 @@ function openContainerForm(){
 document.getElementById("containerForm").style.display="flex";
 
 }
-
+let editingContainer=null;
 function saveContainer(){
 
 let number=document.getElementById("containerNo").value.trim();
@@ -273,6 +276,14 @@ status:status
 };
 
 let containers=JSON.parse(localStorage.getItem("containers"))||[];
+
+if(editingContainer){
+
+containers=containers.filter(c=>c.number!==editingContainer);
+
+editingContainer=null;
+
+}
 
 containers.push(container);
 
@@ -374,5 +385,26 @@ localStorage.setItem("containers",JSON.stringify(containers));
 loadContainers();
 
 }
+
+}
+function editContainer(btn){
+
+let row=btn.parentElement.parentElement;
+
+document.getElementById("containerNo").value=row.cells[0].innerText;
+
+document.getElementById("containerSize").value=row.cells[1].innerText;
+
+document.getElementById("customerName").value=row.cells[2].innerText;
+
+document.getElementById("shippingLine").value=row.cells[3].innerText;
+
+document.getElementById("yardLocation").value=row.cells[4].innerText;
+
+document.getElementById("containerStatus").value=row.cells[5].innerText;
+
+editingContainer=row.cells[0].innerText;
+
+document.getElementById("containerForm").style.display="flex";
 
 }
