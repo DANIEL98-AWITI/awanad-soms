@@ -20,20 +20,37 @@
 
 <img src="public/images/logo.png" class="logo">
 
-<div class="company">
+<div>
+
 <h1>AWANAD SOMS</h1>
+
 <p>Container Operations</p>
-</div>
 
 </div>
 
-<div class="user">
-👤 Daniel
+</div>
+
+<div class="header-right">
+
+<input
+type="text"
+id="searchContainer"
+class="search-box"
+placeholder="Search BL or Container">
+
+<div class="user-box">
+
+🔔
+
+<span>Daniel</span>
+
+</div>
+
 </div>
 
 </header>
 
-<div class="sidebar">
+<aside class="sidebar">
 
 <h3>MAIN MENU</h3>
 
@@ -41,11 +58,15 @@
 
 <a href="vessels.html">🚢 Vessel Management</a>
 
-<a href="containers.html">📦 Container Operations</a>
+<a href="bl.html">📑 BL Register</a>
 
-<a href="invoices.html">📋 Invoice Register</a>
+<a class="active" href="containers.html">📦 Container Operations</a>
 
 <a href="roro.html">🚗 RORO Operations</a>
+
+<a href="invoices.html">💰 Invoice Register</a>
+
+<a href="customers.html">👥 Customers</a>
 
 <a href="reports.html">📊 Reports</a>
 
@@ -53,74 +74,21 @@
 
 <a href="index.html">🚪 Logout</a>
 
-</div>
+</aside>
 
-<div class="content">
+<main class="content">
 
-<h1>Container Operations</h1>
+<div class="page-title">
 
-<br>
+<h2>Container Operations</h2>
 
-<input
-type="text"
-id="searchContainer"
-placeholder="Search Container..."
-class="search-box"
-onkeyup="searchContainer()">
-
-<br><br>
-
-<button class="action-btn" onclick="openContainerForm()">
+<button class="action-btn" onclick="openContainerModal()">
 
 ➕ Add Container
 
 </button>
-<div id="containerForm" class="modal">
-
-<div class="modal-content">
-
-<h2>Add New Container</h2>
-
-<input type="text" id="containerNo" placeholder="Container Number">
-
-<select id="containerSize">
-
-<option>20 FT</option>
-
-<option>40 FT</option>
-
-<option>45 FT</option>
-
-</select>
-
-<input type="text" id="customerName" placeholder="Customer Name">
-
-<input type="text" id="shippingLine" placeholder="Shipping Line">
-
-<input type="text" id="yardLocation" placeholder="Yard Location">
-
-<select id="containerStatus">
-
-<option>Received</option>
-
-<option>Discharging</option>
-
-<option>Evacuating</option>
-
-<option>Released</option>
-
-</select>
-
-<button class="action-btn" onclick="saveContainer()">
-
-Save Container
-
-</button>
 
 </div>
-
-</div>
-<br><br>
 
 <table>
 
@@ -128,13 +96,17 @@ Save Container
 
 <tr>
 
-<th>Container No</th>
-<th>Size</th>
+<th>BL Number</th>
+
+<th>Vessel</th>
+
 <th>Customer</th>
+
 <th>Shipping Line</th>
-<th>Yard Location</th>
+
+<th>Container</th>
+
 <th>Status</th>
-<th>Action</th>
 
 </tr>
 
@@ -146,9 +118,57 @@ Save Container
 
 </table>
 
+</main>
+
+<div id="containerModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Add Container</h2>
+
+<input type="text" id="containerBL" placeholder="Enter BL Number" onkeyup="fetchBL()">
+
+<input type="text" id="containerVessel" readonly>
+
+<input type="text" id="containerCustomer" readonly>
+
+<input type="text" id="containerShipping" readonly>
+
+<input type="text" id="containerNumber" placeholder="Container Number">
+
+<select id="containerStatus">
+
+<option>Awaiting</option>
+
+<option>Discharging</option>
+
+<option>Evacuating</option>
+
+<option>Completed</option>
+
+</select>
+
+<div class="modal-buttons">
+
+<button class="save-btn" onclick="saveContainer()">
+
+Save
+
+</button>
+
+<button class="cancel-btn" onclick="closeContainerModal()">
+
+Cancel
+
+</button>
+
 </div>
 
-<script src="js/dashboard.js"></script>
+</div>
+
+</div>
+
+<script src="js/containers.js"></script>
 
 </body>
 
