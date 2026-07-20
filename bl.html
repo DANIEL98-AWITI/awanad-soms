@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BL Register | AWANAD SOMS</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+<div class="logo-section">
+
+<img src="public/images/logo.png" class="logo">
+
+<div>
+
+<h1>AWANAD SOMS</h1>
+
+<p>Bill of Lading Register</p>
+
+</div>
+
+</div>
+
+<div class="header-right">
+
+<input
+type="text"
+id="searchBL"
+class="search-box"
+placeholder="Search BL..."
+onkeyup="searchBL()">
+
+<div class="user-box">
+
+🔔
+
+<span>Daniel</span>
+
+</div>
+
+</div>
+
+</header>
+
+<aside class="sidebar">
+
+<h3>MAIN MENU</h3>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="vessels.html">🚢 Vessel Management</a>
+
+<a class="active" href="bl.html">📑 BL Register</a>
+
+<a href="containers.html">📦 Container Operations</a>
+
+<a href="roro.html">🚗 RORO Operations</a>
+
+<a href="invoices.html">💰 Invoice Register</a>
+
+<a href="customers.html">👥 Customers</a>
+
+<a href="reports.html">📊 Reports</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+<a href="index.html">🚪 Logout</a>
+
+</aside>
+
+<main class="content">
+
+<div class="page-title">
+
+<h2>Bill of Lading Register</h2>
+
+<button class="action-btn" onclick="openBLModal()">
+
+➕ New BL
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>BL Number</th>
+
+<th>Vessel</th>
+
+<th>Customer</th>
+
+<th>Shipping Line</th>
+
+<th>Cargo</th>
+
+<th>ETA</th>
+
+<th>Containers</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="blTableBody">
+
+</tbody>
+
+</table>
+
+</main>
+
+<div id="blModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Register Bill of Lading</h2>
+
+<input type="text" id="blNumber" placeholder="BL Number">
+
+<input type="text" id="blVessel" placeholder="Vessel">
+
+<input type="text" id="blCustomer" placeholder="Customer">
+
+<input type="text" id="blShippingLine" placeholder="Shipping Line">
+
+<input type="text" id="blCargo" placeholder="Cargo">
+
+<input type="date" id="blETA">
+
+<textarea
+id="blContainers"
+placeholder="Container Numbers (comma separated)"
+style="padding:12px;height:120px;border:1px solid #ccc;border-radius:8px;"></textarea>
+
+<div class="modal-buttons">
+
+<button class="save-btn" onclick="saveBL()">
+
+Save BL
+
+</button>
+
+<button class="cancel-btn" onclick="closeBLModal()">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/bl.js"></script>
+
+</body>
+
+</html>
