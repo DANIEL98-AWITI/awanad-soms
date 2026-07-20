@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vessel Management | AWANAD SOMS</title>
+<title>AWANAD SOMS | Vessel Management</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
 
@@ -14,27 +14,46 @@
 
 <body>
 
+<!-- TOP HEADER -->
+
 <header class="top-header">
 
 <div class="logo-section">
 
-<img src="public/images/logo.png" class="logo">
+<img src="public/images/logo.png" class="logo" alt="AWANAD Logo">
 
-<div class="company">
+<div>
 
 <h1>AWANAD SOMS</h1>
 
-<p>Vessel Management</p>
+<p>Stevedoring Operations Management System</p>
 
 </div>
 
 </div>
 
-<div class="user">
-👤 Daniel
+<div class="header-right">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Vessel..."
+onkeyup="searchVessel()"
+class="search-box">
+
+<div class="user-box">
+
+🔔
+
+<span>Daniel</span>
+
+</div>
+
 </div>
 
 </header>
+
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -42,13 +61,17 @@
 
 <a href="dashboard.html">🏠 Dashboard</a>
 
-<a href="vessels.html">🚢 Vessel Management</a>
+<a class="active" href="vessels.html">🚢 Vessel Management</a>
+
+<a href="bl.html">📑 BL Register</a>
 
 <a href="containers.html">📦 Container Operations</a>
 
-<a href="invoices.html">📋 Invoice Register</a>
-
 <a href="roro.html">🚗 RORO Operations</a>
+
+<a href="invoices.html">💰 Invoice Register</a>
+
+<a href="customers.html">👥 Customers</a>
 
 <a href="reports.html">📊 Reports</a>
 
@@ -57,61 +80,23 @@
 <a href="index.html">🚪 Logout</a>
 
 </aside>
+
+<!-- CONTENT -->
+
 <main class="content">
 
-<h1>Vessel Management</h1>
-<br>
+<div class="page-title">
 
-<input
-type="text"
-id="searchVessel"
-placeholder="Search Vessel..."
-onkeyup="searchVessel()"
-class="search-box">
+<h2>Vessel Management</h2>
 
-<br><br>
-<button class="action-btn" onclick="openVesselForm()">
-➕ Register New Vessel
-</button>
+<button class="action-btn" onclick="openVesselModal()">
 
-<br><br>
-<div id="vesselForm" class="modal">
+➕ Register Vessel
 
-<div class="modal-content">
-
-<div style="display:flex;justify-content:space-between;align-items:center;">
-
-<h2>Register New Vessel</h2>
-
-<button onclick="closeVesselForm()" style="background:red;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;">✖</button>
-
-</div>
-
-<input type="text" id="vesselName" placeholder="Vessel Name">
-
-<input type="text" id="shippingLine" placeholder="Shipping Line">
-
-<input type="date" id="eta">
-
-<input type="date" id="ata">
-
-<select id="cargo">
-
-<option>Containers</option>
-
-<option>RORO</option>
-
-<option>Break Bulk</option>
-
-</select>
-
-<button class="action-btn" onclick="saveVessel()">
-Save Vessel
 </button>
 
 </div>
 
-</div>
 <table>
 
 <thead>
@@ -122,15 +107,15 @@ Save Vessel
 
 <th>Shipping Line</th>
 
+<th>Voyage</th>
+
 <th>ETA</th>
 
 <th>ATA</th>
 
-<th>Cargo</th>
-
 <th>Status</th>
 
-<th>Actions</th>
+<th>Action</th>
 
 </tr>
 
@@ -138,49 +123,80 @@ Save Vessel
 
 <tbody id="vesselTableBody">
 
-<tr>
-
-<td>MSC POLARIS</td>
-
-<td>MSC</td>
-
-<td>18/06/2026</td>
-
-<td>18/06/2026</td>
-
-<td>Containers</td>
-
-<td><span class="badge green">Active</span></td>
-
-<td>✏️ 🗑️</td>
-
-</tr>
-
-<tr>
-
-<td>XIN HUANG PU</td>
-
-<td>COSCO</td>
-
-<td>02/07/2026</td>
-
-<td>02/07/2026</td>
-
-<td>Containers</td>
-
-<td><span class="badge blue">Working</span></td>
-
-<td>✏️ 🗑️</td>
-
-</tr>
-
 </tbody>
 
 </table>
 
 </main>
 
-<script src="js/dashboard.js"></script>
+<!-- MODAL -->
+
+<div id="vesselModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Register Vessel</h2>
+
+<input
+type="text"
+id="vesselName"
+placeholder="Vessel Name">
+
+<input
+type="text"
+id="shippingLine"
+placeholder="Shipping Line">
+
+<input
+type="text"
+id="voyage"
+placeholder="Voyage">
+
+<label>ETA</label>
+
+<input
+type="date"
+id="eta">
+
+<label>ATA</label>
+
+<input
+type="date"
+id="ata">
+
+<select id="status">
+
+<option>Expected</option>
+
+<option>Arrived</option>
+
+<option>Discharging</option>
+
+<option>Completed</option>
+
+</select>
+
+<div class="modal-buttons">
+
+<button class="save-btn" onclick="saveVessel()">
+
+Save
+
+</button>
+
+<button class="cancel-btn" onclick="closeVesselModal()">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/vessels.js"></script>
 
 </body>
 
