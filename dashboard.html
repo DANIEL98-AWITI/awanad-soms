@@ -1,323 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AWANAD SOMS</title>
-
-<link rel="stylesheet" href="css/dashboard.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWANAD SOMS Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
-
 <body>
 
-<header class="top-header">
-
-<div class="logo-section">
-
-<img src="public/images/logo.png" class="logo" alt="AWANAD Logo">
-
-<div class="company">
-
-<h1>AWANAD SOMS</h1>
-
-<p>Stevedoring Operations Management System</p>
-
-</div>
-
-</div>
-
-<div class="search-section">
-
-<input type="text" placeholder="Search vessels, containers, invoices...">
-
-</div>
-
-<div class="header-right">
-
-<span>🔔</span>
-
-<span>📅 <span id="currentDate"></span></span>
-
-<span>🕒 <span id="currentTime"></span></span>
-
-<div class="user">
-
-👤 Daniel
-
-</div>
-
-</div>
-
-</header>
-
-<aside class="sidebar">
-
-<aside class="sidebar">
-
-<h3>MAIN MENU</h3>
-
-<a href="dashboard.html">🏠 Dashboard</a>
-
-<a href="vessels.html">🚢 Vessel Management</a>
-
-<a href="containers.html">📦 Container Operations</a>
-
-<a href="invoices.html">📋 Invoice Register</a>
-
-<a href="roro.html">🚗 RORO Operations</a>
-
-<a href="reports.html">📊 Reports</a>
-
-<a href="settings.html">⚙ Settings</a>
-
-<a href="index.html">🚪 Logout</a>
-
-</aside>
-
-<main class="content">
-
-<h1>Welcome back, Daniel!</h1>
-
-<p>Here's what's happening today.</p>
-<section class="quick-actions">
-
-<button class="action-btn">➕ New Vessel</button>
-
-<button class="action-btn">📦 Add Container</button>
-
-<button class="action-btn">🚗 Add RORO</button>
-
-<button class="action-btn">💰 New Invoice</button>
-
-<button class="action-btn">📊 Generate Report</button>
-
-</section>
-<div class="cards">
-
-<div class="card">
-<h2>Total Containers</h2>
-<h1>156</h1>
-</div>
-
-<div class="card">
-<h2>RORO Units</h2>
-<h1>83</h1>
-</div>
-
-<div class="card">
-<h2>Expected Vessels</h2>
-<h1>12</h1>
-</div>
-
-<div class="card">
-<h2>Pending Invoices</h2>
-<h1>24</h1>
-</div>
-
-</div>
-<section class="stats-grid">
-
-<div class="stat-box">
-<h3>⚓ Active Vessels</h3>
-<h1>08</h1>
-<p>Currently at Port</p>
-</div>
-
-<div class="stat-box">
-<h3>📦 Containers Cleared</h3>
-<h1>148</h1>
-<p>This Week</p>
-</div>
-
-<div class="stat-box">
-<h3>🚗 Vehicles Released</h3>
-<h1>73</h1>
-<p>Today</p>
-</div>
-
-<div class="stat-box">
-<h3>💵 Revenue</h3>
-<h1>KES 2.4M</h1>
-<p>This Month</p>
-</div>
-
-</section>
-  <section class="activity-panel">
-
-<h2>Recent Activities</h2>
-
-<ul>
-
-<li>✅ MSC POLARIS - 14 Containers discharged.</li>
-
-<li>🚗 DON JUAN - 41 Units released.</li>
-
-<li>💰 Invoice #79247130 paid successfully.</li>
-
-<li>🚢 XIN HUANG PU arrived at berth.</li>
-
-<li>📦 APL FLORIDA evacuation in progress.</li>
-
-</ul>
-
-</section>
-  <section class="dashboard-row">
-
-<div class="chart-card">
-
-<h2>📈 Weekly Operations</h2>
-
-<div class="chart-placeholder">
-
-Coming Soon
-
-</div>
-
-</div>
-
-<div class="chart-card">
-
-<h2>🚢 Vessel Summary</h2>
-
-<table class="mini-table">
-
-<tr>
-
-<td>At Berth</td>
-
-<td><strong>8</strong></td>
-
-</tr>
-
-<tr>
-
-<td>Expected</td>
-
-<td><strong>12</strong></td>
-
-</tr>
-
-<tr>
-
-<td>Completed</td>
-
-<td><strong>23</strong></td>
-
-</tr>
-
-<tr>
-
-<td>Delayed</td>
-
-<td><strong>2</strong></td>
-
-</tr>
-
-</table>
-
-</div>
-
-</section>
-<div class="table-box">
-
-<h2>Today's Operations</h2>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Vessel</th>
-
-<th>Type</th>
-
-<th>Cargo</th>
-
-<th>Status</th>
-
-<th>Progress</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>MSC POLARIS</td>
-
-<td>Container</td>
-
-<td>14 Containers</td>
-
-<td><span class="badge blue">Discharging</span></td>
-<td>
-<div class="progress">
-<div class="progress-bar blue" style="width:85%;"></div>
-</div>
-</td>
-
-
-</tr>
-
-<tr>
-
-<td>APL FLORIDA</td>
-
-<td>Container</td>
-
-<td>2 Containers</td>
-
-<td><span class="badge blue">Discharging</span></td>
-<td>
-<div class="progress">
-<div class="progress-bar blue" style="width:85%;"></div>
-</div>
-</td>
-
-
-
-</tr>
-
-<tr>
-
-<td>DON JUAN</td>
-
-<td>RORO</td>
-
-<td>41 Units</td>
-
-<td><span class="badge orange">Completed</span></td>
-<td>
-<div class="progress">
-<div class="progress-bar orange" style="width:100%;"></div>
-</div>
-</td>
-
-
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</main>
-<footer class="footer">
-
-<p>© 2026 AWANAD Container Freight Station | Stevedoring Operations Management System</p>
-
-</footer>
-<script src="js/dashboard.js"></script>
+    <header class="top-header">
+        <div class="banner">
+            <img src="public/images/logo.png" alt="AWANAD Banner">
+        </div>
+
+        <div class="header-bar">
+            <div class="search-box">
+                <input type="text" placeholder="Search vessels, containers, invoices...">
+            </div>
+
+            <div class="header-right">
+                <span>🔔</span>
+                <span>📅 17 Jul 2026</span>
+                <span>🕒 10:30 AM</span>
+                <div class="user">👤 Daniel</div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <h3>MAIN MENU</h3>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="vessels.html">🚢 Vessel Management</a>
+        <a href="bl.html">📄 BL Register</a>
+        <a href="containers.html">📦 Container Operations</a>
+        <a href="roro.html">🚗 RORO Operations</a>
+        <a href="invoices.html">💰 Invoice Register</a>
+        <a href="customers.html">👥 Customers</a>
+        <a href="reports.html">📊 Reports</a>
+        <a href="settings.html">⚙ Settings</a>
+        <a href="index.html">🚪 Logout</a>
+    </aside>
+
+    <main class="content">
+        <h1>Welcome back, Daniel!</h1>
+        <p>Here's the latest overview of AWANAD operations.</p>
+
+        <section class="cards">
+            <div class="card">
+                <h2>Total Containers</h2>
+                <h1>156</h1>
+                <p>Containers under operation</p>
+            </div>
+
+            <div class="card">
+                <h2>RORO Units</h2>
+                <h1>83</h1>
+                <p>Vehicles received</p>
+            </div>
+
+            <div class="card">
+                <h2>Expected Vessels</h2>
+                <h1>12</h1>
+                <p>Awaiting arrival</p>
+            </div>
+
+            <div class="card">
+                <h2>Pending Invoices</h2>
+                <h1>24</h1>
+                <p>Awaiting payment</p>
+            </div>
+        </section>
+
+        <section class="dashboard-row">
+            <div class="chart-card">
+                <h2>📈 Weekly Operations</h2>
+                <div class="chart-placeholder">Chart Area</div>
+            </div>
+
+            <div class="chart-card">
+                <h2>⚓ Vessel Summary</h2>
+                <table class="mini-table">
+                    <tr><td>At Berth</td><td><strong>8</strong></td></tr>
+                    <tr><td>Expected</td><td><strong>12</strong></td></tr>
+                    <tr><td>Completed</td><td><strong>23</strong></td></tr>
+                    <tr><td>Delayed</td><td><strong>2</strong></td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="activity-panel">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li>MSC POLARIS - 14 Containers discharged.</li>
+                <li>DON JUAN - 41 Units released.</li>
+                <li>Invoice #79247130 paid successfully.</li>
+                <li>XIN HUANG PU arrived at berth.</li>
+            </ul>
+        </section>
+
+        <section class="table-box">
+            <h2>Today's Operations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vessel</th>
+                        <th>Cargo</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MSC POLARIS</td>
+                        <td>14 Containers</td>
+                        <td><span class="badge blue">Discharging</span></td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar blue" style="width:85%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
 </body>
-
 </html>
